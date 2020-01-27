@@ -1,0 +1,62 @@
+.container {
+  background-color: #ccc;
+  height: 500px;
+  display: flex;
+
+  flex-direction: row;
+  /* column | row-reverse | column-reverse */
+
+  /* definir se os nossos itens vão ter quebra de linha ou não */
+  flex-wrap: nowrap;
+  /* wrap | wrap-reverse | nowrap*/
+
+  /* forma resumida de definir flexdirection e flexwrap (ao mesmo tempo) */
+  /* flex-flow: row nowrap; */
+
+  /* alinhamentos horizontais */
+  justify-content: flex-start;
+  /* flex-end | center | space-betwen | space-around */
+
+  /* alinhamento vertical */
+  align-items: stretch;
+  /* flex-start | flex-end | center | baseline */
+
+  /* alinhamento vertical, quando tiver quebra */
+  align-content: flex-start;
+  /* flex-start |flex-end center | space-between | space-around */
+}
+
+.item {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin: 5px;
+  height: 30px;
+
+  /* relacionado a largura MAIOR em relação aos outros itens  (define o tamanho dos itens)*/
+  /* aqui todos estão com o tamanho 1 */
+  flex-grow: 1;
+
+  /* relacionado a largura MENOR em relação aos outros itens  (define o tamanho dos itens)*/
+  flex-shrink: 1;
+
+  /* define a altura inicial do item em questão */
+  flex-basis: 300px;
+
+  /* define os itens acima tudo em uma linha
+  flex-grow: 1 ---- flex-shrink: 1 - flex-basis: 300px
+  */
+  flex: 1 1 300px;
+}
+
+.article-01 {
+  /* aqui definimos que esse item terá 3x mais o tamanho dos outros itens */
+  /* flex-grow:3 */
+  flex-shrink: 3;
+}
+.article-02 {
+}
+.article-03 {
+}
+.article-04 {
+}
